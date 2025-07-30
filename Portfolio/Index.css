@@ -1,0 +1,46 @@
+h1 {
+    color: rgb(171, 15, 15);
+    text-align: center;
+    border: 5px solid rgb(12, 12, 7);
+}
+
+body {
+    background-color: rgba(43, 131, 172, 0.18);
+    ;
+}
+
+p {
+    color: #000000;
+    display: inline-block;
+}
+
+li {
+    list-style: none;
+}
+
+strong {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    background-color: rgb(242, 242, 245);
+}
+
+nav a {
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+    padding: 8px 12px,
+
+}
+
+nav a:hover {
+    background-color: rgb(160, 99, 102)
+}
