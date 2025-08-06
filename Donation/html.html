@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Donation Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h2>Donor Information:</h2>
+    <form>
+        <b><label>First Name* <input type="text" required></label></b>
+        <b><label>Last Name* <input type="text" required></label></b>
+        <b><label>Company <input type="text"></label></b>
+        <b><label>Address 1* <input type="text" required></label></b>
+        <b><label>Address 2 <input type="text"></label></b>
+        <b><label>City* <input type="text" required></label></b>
+        <b><label>State*</b>
+        <select required>
+            <option>Select a State</option>
+        </select>
+        </label>
+        <b><label>Zip Code* <input type="text" required></label></b>
+        <b><label>Country*</b>
+        <select required>
+            <option>Select a Country</option>
+        </select>
+        </label>
+        <b><label>Phone <input type="text"></label></b>
+        <b><label>Fax <input type="text"></label></b>
+        <b><label>Email <input type="email"></label></b>
+
+        <b><label>Donation Amount*</label></b>
+        <div class="donation options:">
+            <label><input type="radio" name="amount" required> None</label>
+            <label><input type="radio" name="amount"> $50</label>
+            <label><input type="radio" name="amount"> $75</label>
+            <label><input type="radio" name="amount"> $100</label>
+            <label><input type="radio" name="amount"> $250</label>
+            <label><input type="radio" name="amount"> Other <input type="text" style="width:10px;"></label>
+        </div>
+
+        <label><input type="checkbox"> I am interested in giving on a regular basis</label>
+        <label>Monthly Credit Card $ <input type="text" style="width:10px;"> for <input type="text"
+                style="width: 110px;">
+            Months</label>
+
+        <h2>Honorarium and Memorial Donation Information</h2>
+        <label><input type="radio" name="tribute"> To Honor</label>
+        <label><input type="radio" name="tribute"> In Memory of</label>
+        <b><label>Name <input type="text"></label></b>
+        <b><label>Acknowledge Donation to <input type="text"></label></b>
+        <b><label>Address <input type="text"></label></b>
+        <b><label>City <input type="text"></label></b>
+        <b><label>State</b>
+        <select>
+            <option>Select a State</option>
+        </select>
+        </label>
+        <b><label>Zip <input type="text"></label></b>
+
+        <h2>Additional Information:</h2>
+        <br>
+        Please enter your name,company or organization as you would like to appear in our publication:
+        <b><label>Name:<input type="text"></label></b>
+        <label><input type="checkbox"> I would like my gift to remain anonymous.</label>
+        <label><input type="checkbox"> My employer offers a matching gift program.I will mail the matching gift
+            form.</label>
+        <label><input type="checkbox"> Please save the cost of acknowledging this gift by not mailing a thank you
+            letter.</label>
+
+        <b><label>Comments:</b>
+        <textarea rows="3"></textarea>
+        </label>
+
+        <label>How may we contact you?</label>
+        <label><input type="checkbox"> E-mail</label>
+        <label><input type="checkbox"> Postal Mail</label>
+        <label><input type="checkbox"> Telephone</label>
+        <label><input type="checkbox"> Fax</label>
+
+        <label>I would like to receive newsletters:
+            <label><input type="checkbox"> E-mail</label>
+            <label><input type="checkbox"> Postal Mail</label>
+        </label>
+
+        <label>I would like information about volunteering with the <input type="text"></label>
+
+        <div class="buttons">
+            <button type="reset">Reset</button>
+            <button type="submit">Continue</button>
+        </div>
+    </form>
+    </div>
+
+</body>
+
+</html>
