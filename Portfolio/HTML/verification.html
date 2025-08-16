@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script type="module">
+        import data from "../data/database.js";
+
+        var feed = [
+            {
+                name: "Salman",
+                email: "Salmanzoha01234@@gmail.com",
+                phoneNumber: "01872611800",
+                subject: "Need of a software developer",
+                message: "We are a Trex tech company and we need a software developer with a deep understanding of web development."
+            }
+        ]
+
+        var userName = prompt("Enter Your Name")
+        var passWord = prompt("Enter Your Password");
+
+        function display() {
+            if (userName === data[0].userName && passWord === data[0].passWord) {
+                console.log(feed);
+            } else {
+                alert("Your Credentials are wrong, unable to authenticate!");
+            }
+        }
+
+        display()
+    </script>
+</body>
+
+</html>
