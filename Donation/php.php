@@ -4,15 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Donation Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .error {
-            color: red;
-        }
-    </style>
 </head>
 
 <body>
@@ -47,10 +38,10 @@
         }
 
         // Address 1
-        if (empty($_POST["address 1"])) {
-            $address1Err = "Address 1  is required";
+        if (empty($_POST["address1"])) {
+            $address1Err = "Address 1 is required";
         } else {
-            $address1 = $_POST["address 1"];
+            $address1 = $_POST["address1"];
         }
 
         // City
@@ -76,11 +67,11 @@
 
         // Country
         if (empty($_POST["country"])) {
-            $countryErr = "country is required";
+            $countryErr = "Country is required";
         } else {
             $country = $_POST["country"];
             if (!preg_match("/^[a-zA-Z ]*$/", $country)) {
-                $countryErr = "Only letters and white space allowed in country";
+                $countryErr = "Only letters and white space allowed in Country";
             }
         }
 
@@ -128,41 +119,41 @@
     ?>
 
     <h2>Donation Form</h2>
-    <p><span class="error">* required field</span></p>
+    <p>* required field</p>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
         First Name*: <input type="text" name="firstName" value="<?php echo $firstName; ?>">
-        <span class="error"><?php echo $firstNameErr; ?></span><br><br>
+        <?php echo $firstNameErr; ?><br><br>
 
         Last Name*: <input type="text" name="lastName" value="<?php echo $lastName; ?>">
-        <span class="error"><?php echo $lastNameErr; ?></span><br><br>
+        <?php echo $lastNameErr; ?><br><br>
 
         Company: <input type="text" name="company" value="<?php echo $company; ?>"><br><br>
 
         Address 1*: <input type="text" name="address1" value="<?php echo $address1; ?>">
-        <span class="error"><?php echo $address1Err; ?></span><br><br>
+        <?php echo $address1Err; ?><br><br>
 
         Address 2: <input type="text" name="address2" value="<?php echo $address2; ?>"><br><br>
 
         City*: <input type="text" name="city" value="<?php echo $city; ?>">
-        <span class="error"><?php echo $cityErr; ?></span><br><br>
+        <?php echo $cityErr; ?><br><br>
 
         State*: <input type="text" name="state" value="<?php echo $state; ?>">
-        <span class="error"><?php echo $stateErr; ?></span><br><br>
+        <?php echo $stateErr; ?><br><br>
 
         Zip Code*: <input type="text" name="zip" value="<?php echo $zip; ?>">
-        <span class="error"><?php echo $zipErr; ?></span><br><br>
+        <?php echo $zipErr; ?><br><br>
 
         Country*: <input type="text" name="country" value="<?php echo $country; ?>">
-        <span class="error"><?php echo $countryErr; ?></span><br><br>
+        <?php echo $countryErr; ?><br><br>
 
-        </Phone>*: <input type="text" name="phone" value="<?php echo $phone; ?>">
-        <span class="error"><?php echo $phoneErr; ?></span><br><br>
+        Phone*: <input type="text" name="phone" value="<?php echo $phone; ?>">
+        <?php echo $phoneErr; ?><br><br>
 
         Fax: <input type="text" name="fax" value="<?php echo $fax; ?>"><br><br>
 
         Email: <input type="text" name="email" value="<?php echo $email; ?>">
-        <span class="error"><?php echo $emailErr; ?></span><br><br>
+        <?php echo $emailErr; ?><br><br>
 
         Donation Amount*:
         <input type="radio" name="amount" value="500"> $500
@@ -170,8 +161,8 @@
         <input type="radio" name="amount" value="1000"> $1000
         <input type="radio" name="amount" value="2500"> $2500
         <input type="radio" name="amount" value="Other"> Other
-        <input type="text" name="otherAmount" style="width:90px;" value="<?php echo $otherAmount; ?>">
-        <span class="error"><?php echo $amountErr; ?></span><br><br>
+        <input type="text" name="otherAmount" value="<?php echo $otherAmount; ?>">
+        <?php echo $amountErr; ?><br><br>
 
         <h3>Honorarium / Memorial Donation</h3>
         <input type="radio" name="tribute" value="Honor"> To Honor
