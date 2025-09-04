@@ -20,6 +20,12 @@ h2 {
     margin-bottom: 20px;
 }
 
+h3 {
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
 form label {
     display: block;
     margin-bottom: 12px;
@@ -53,7 +59,9 @@ textarea {
     margin-top: 20px;
 }
 
-button {
+button,
+input[type="submit"],
+input[type="reset"] {
     padding: 10px 20px;
     background-color: #0077aa;
     color: white;
@@ -63,8 +71,23 @@ button {
     cursor: pointer;
 }
 
-button[type="reset"] {
+input[type="reset"] {
     background-color: #6c757d;
+}
+
+/* 🔴 Error messages styled */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
 }
 
 @media (max-width: 600px) {
